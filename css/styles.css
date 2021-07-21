@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body { 
+    background-color: #E5E5E5;
+}
+
+body * {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 30px;
+}
+
+h6 {
+    font-size: 12px;
+}
+
+.top {
+    background-color: #CF2B2B;
+    width: 100%;
+    height: auto;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 4px 1px rgb(24, 24, 24);
+}
+
+.bottom {
+    background-color: white;
+    padding: 13px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.select {
+    background-color: #CBCBCB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 15px;
+    color: white;
+}
+
+.done {
+    display: none;
+}
