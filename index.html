@@ -16,88 +16,114 @@
         <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
-        <div class="top">
-            <h1>DrivenEats</h1>
-            <h6>Sua comida em 6 minutos</h6>
+        <div class="full">
+            <div class="confirm">
+                <h3>Confirme seu pedido</h3>
+                <div class="order">
+                    <span class="foods"><p class="dish"></p><p class="value1"></p></span>
+                    <span class="foods"><p class="bavarage"></p><p class="value2"></p></span>
+                    <span class="foods"><p class="lastDish"></p><p class="value3"></p></span>
+                    <strong class="foods"><p>Total</p><p class="total">R$ 27,70</p></strong>
+                </div>
+                <div class="infos">
+                    <span class="name"></span>
+                    <span class="adress"></span>
+                </div>
+                <div class="finalize" onclick="finalConfirm()"> Tudo certo, pode pedir!</div>
+                <h3 class="cancel" onclick="cancelOrder()">Cancelar</h3>
+            </div>
         </div>
+        <div class="app">
+            <div class="top">
+                <h1>DrivenEats</h1>
+                <h6>Sua comida em 6 minutos</h6>
+            </div>
 
-        <div class="menu">
-            <div class="food">
-                <h2>Primeiro, seu prato</h2>
-                <div class="list">
-                    <div class="item">
-                        <img src="/images/frango_yin_yang.png"/>
-                        <h4>Frango Teriaky</h4>
-                        <p>Frango, Batata, arroz e salada</p>
-                        <h4>R$ 17,90</h4>
+            <div class="menu">
+                <div class="food">
+                    <h2>Primeiro, seu prato</h2>
+                    <div class="list">
+                        <div class="item food" id="food1" onclick="selectFood('1')">
+                            <img src="/images/frango_yin_yang.png"/>
+                            <h4>Frango Teriaky</h4>
+                            <p>Frango, Batata, arroz e salada</p>
+                            <h4>R$ 17,90</h4>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                        <div class="item food" id="food2" onclick="selectFood('2')">
+                            <img src="/images/frango_yin_yang.png"/>
+                            <h4>Frango Yin Yang</h4>
+                            <p>Frango, Batata, arroz e salada</p>
+                            <h4>R$ 15,90</h4>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                        <div class="item food" id="food3" onclick="selectFood('3')">
+                            <img src="/images/frango_yin_yang.png"/>
+                            <h4>frango Parmegiana</h4>
+                            <p>Frango, Batata, arroz e salada</p>
+                            <h4>R$ 14,90</h4>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
                     </div>
-                    <div class="item">
-                        <img src="/images/frango_yin_yang.png"/>
-                        <h4>Frango Yin Yang</h4>
-                        <p>Frango, Batata, arroz e salada</p>
-                        <h4>R$ 15,90</h4>
+                    <h2>Agora, sua bebida</h2>
+                    <div class="list">
+                        <div class="item" id="drink1" onclick="selectDrink('1')">
+                            <img src="/images/coquinha_gelada.png"/>
+                            <h4>Coca Gelada</h4>
+                            <p>lata 350ml</p>
+                            <h4>R$ 4,90</h4>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                        <div class="item" id="drink2" onclick="selectDrink('2')">
+                            <img src="/images/coquinha_gelada.png"/>
+                            <h4>Pepsi Gelada</h4>
+                            <p>lata 350ml</p>
+                            <h4>R$ 4,20</h4>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                        <div class="item" id="drink3" onclick="selectDrink('3')">
+                            <img src="/images/coquinha_gelada.png"/>
+                            <h4>Suco Gelado</h4>
+                            <p>Copo 250ml</p>
+                            <h4>R$ 6,90</h4>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
                     </div>
-                    <div class="item">
-                        <img src="/images/frango_yin_yang.png"/>
-                        <h4>frango Parmegiana</h4>
-                        <p>Frango, Batata, arroz e salada</p>
-                        <h4>R$ 14,90</h4>
-                    </div>
-                </div>
-                <h2>Agora, sua bebida</h2>
-                <div class="list">
-                    <div class="item">
-                        <img src="/images/coquinha_gelada.png"/>
-                        <h4>Coca Gelada</h4>
-                        <p>lata 350ml</p>
-                        <h4>R$ 4,90</h4>
-                    </div>
-                    <div class="item">
-                        <img src="/images/coquinha_gelada.png"/>
-                        <h4>Pepsi Gelada</h4>
-                        <p>lata 350ml</p>
-                        <h4>R$ 4,20</h4>
-                    </div>
-                    <div class="item">
-                        <img src="/images/coquinha_gelada.png"/>
-                        <h4>Suco Gelado</h4>
-                        <p>Copo 250ml</p>
-                        <h4>R$ 6,90</h4>
-                    </div>
-                </div>
-                <h2>Por fim, sua sobremesa</h2>
-                <div class="list">
-                    <div class="item">
-                        <img src="/images/pudim.png"/>
-                        <h4>Pudim</h4>
-                        <p>Apenas Pudim</p>
-                        <h4>R$ 7,90</h4>
-                    </div>
-                    <div class="item">
-                        <img src="/images/pudim.png"/>
-                        <h4>Brownie</h4>
-                        <p>Apena Brownie</p>
-                        <h4>R$ 8,90</h4>
-                    </div>
-                    <div class="item">
-                        <img src="/images/pudim.png"/>
-                        <h4>Petiet Gateau</h4>
-                        <p>Petiet Gateau com Sorvete</p>
-                        <h4>R$ 10,90</h4>
+                    <h2>Por fim, sua sobremesa</h2>
+                    <div class="list">
+                        <div class="item" id="dessert1" onclick="selectDessert('1')">
+                            <img src="/images/pudim.png"/>
+                            <h4>Pudim</h4>
+                            <p>Apenas Pudim</p>
+                            <h4>R$ 7,90</h4>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                        <div class="item" id="dessert2" onclick="selectDessert('2')">
+                            <img src="/images/pudim.png"/>
+                            <h4>Brownie</h4>
+                            <p>Apena Brownie</p>
+                            <h4>R$ 8,90</h4>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
+                        <div class="item" id="dessert3"onclick="selectDessert('3')">
+                            <img src="/images/pudim.png"/>
+                            <h4>Petiet Gateau</h4>
+                            <p>Petiet Gateau com Sorvete</p>
+                            <h4>R$ 10,90</h4>
+                            <ion-icon name="checkmark-circle"></ion-icon>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="drink"></div>
-            <div class="dessert"></div>
-        </div>
 
-        <div class="bottom">
-            <div class="select">
-                <p class="notdone">Selecione os 3 itens </br>para fechar o pedido</p>
-                <div class="done">Fechar Pedido</div>
+            <div class="bottom">
+                <div class="select">
+                    <p class="notdone">Selecione os 3 itens </br>para fechar o pedido</p>
+                    <div class="done" onclick="closeOrder()">Fechar Pedido</div>
+                </div>
             </div>
         </div>
-
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script src="index.js"></script>
     </body>
 </html>

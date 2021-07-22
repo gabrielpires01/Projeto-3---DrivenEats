@@ -32,6 +32,10 @@ p {
     font-size: 12px;
 }
 
+strong {
+    font-weight: bold;
+}
+
 .top {
     background-color: #CF2B2B;
     width: 100%;
@@ -42,11 +46,12 @@ p {
     top: 0;
     left: 0;
     box-shadow: 0 1px 1px 1px rgb(150, 150, 150);
+    z-index: 1;
 }
 
 .menu {
-    margin: 62px 10px;
-    padding: 20px 5px;
+    margin: 62px 0px 62px 10px;
+    padding: 20px 0px 20px 5px;
 }
 
 .list {
@@ -63,6 +68,7 @@ p {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0px 5px 1px rgb(116, 116, 116);
+    position: relative;
 }
 
 .item img,
@@ -75,6 +81,17 @@ p {
     width: 120px;
 }
 
+.item ion-icon {
+    position: absolute;
+    color: #32B72F;
+    background-color: white;
+    right: 5px;
+    bottom: 5px;
+    width: 15px;
+    height: 15px;
+    display: none;
+}
+
 .bottom {
     background-color: white;
     padding: 13px;
@@ -82,6 +99,7 @@ p {
     bottom: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .select {
@@ -96,5 +114,75 @@ p {
 }
 
 .done {
+    width: 100%;
+    text-align: center;
     display: none;
+}
+
+.confirm {
+    position: fixed;
+    width: 90%;
+    margin: 0 5%;
+    left: 0;
+    top: 30%;
+    background-color: #32B72F;
+    border-radius: 5px;
+    z-index: 3;
+    box-shadow: 0 0px 5px 1px rgb(116, 116, 116);
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px 5px;
+    display: none;
+}
+
+.finalize {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85%;
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+    color: #32B72F;
+    margin-bottom: 4%;
+}
+
+.cancel {
+    font-size: 14px;
+}
+
+.order {
+    width:90%;
+    margin: 8% 0 3% 0;
+}
+
+.foods {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+}
+
+.foods p {
+    font-size: 13px;
+}
+
+.infos {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.infos span {
+    margin-bottom: 5px;
+}
+
+/*Change on JS*/
+.app {
+    opacity: 1;
 }
