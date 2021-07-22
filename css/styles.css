@@ -42,11 +42,12 @@ p {
     top: 0;
     left: 0;
     box-shadow: 0 1px 1px 1px rgb(150, 150, 150);
+    z-index: 1;
 }
 
 .menu {
-    margin: 62px 10px;
-    padding: 20px 5px;
+    margin: 62px 0px 62px 10px;
+    padding: 20px 0px 20px 5px;
 }
 
 .list {
@@ -63,6 +64,7 @@ p {
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0px 5px 1px rgb(116, 116, 116);
+    position: relative;
 }
 
 .item img,
@@ -75,6 +77,17 @@ p {
     width: 120px;
 }
 
+.item ion-icon {
+    position: absolute;
+    color: #32B72F;
+    background-color: white;
+    right: 5px;
+    bottom: 5px;
+    width: 15px;
+    height: 15px;
+    display: none;
+}
+
 .bottom {
     background-color: white;
     padding: 13px;
@@ -82,6 +95,7 @@ p {
     bottom: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .select {
